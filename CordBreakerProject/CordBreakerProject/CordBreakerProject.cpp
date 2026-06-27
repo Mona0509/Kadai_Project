@@ -27,7 +27,8 @@ int main()
 			int hitCheck = check.hitNum;
 			check.hitNum += numCom.NumHitCheck(&random.randomNum_[i], &input.inputNum_[i]);
 			if (hitCheck == check.hitNum) {
-				check.blowNum += numCom.NumBlowCheck(&random.randomNum_[0],
+				check.blowNum += numCom.NumBlowCheck(
+					&random.randomNum_[0],
 					&random.randomNum_[1],
 					&random.randomNum_[2],
 					&random.randomNum_[3],
