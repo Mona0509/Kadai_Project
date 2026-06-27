@@ -24,12 +24,15 @@ int main()
 		check.hitNum = 0;
 
 		for (int i = 0; i < 4; i++) {
+			int hitCheck = check.hitNum;
 			check.hitNum += numCom.NumHitCheck(&random.randomNum_[i], &input.inputNum_[i]);
-			check.blowNum += numCom.NumBlowCheck(&random.randomNum_[0],
-				&random.randomNum_[1],
-				&random.randomNum_[2],
-				&random.randomNum_[3],
-				&input.inputNum_[i]);
+			if (hitCheck == check.hitNum) {
+				check.blowNum += numCom.NumBlowCheck(&random.randomNum_[0],
+					&random.randomNum_[1],
+					&random.randomNum_[2],
+					&random.randomNum_[3],
+					&input.inputNum_[i]);
+			}
 		}
 		LastAnswer lastAnswer;
 		clearCheck = lastAnswer.OpenText(check.hitNum,check.blowNum,check.count);
