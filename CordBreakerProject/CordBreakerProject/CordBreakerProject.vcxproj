@@ -124,6 +124,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CordBreakerProject.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LastAnswer.cpp" />
+    <ClCompile Include="NumComparison.cpp" />
+    <ClCompile Include="Random.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="LastAnswer.h" />
+    <ClInclude Include="NumComparison.h" />
+    <ClInclude Include="Random.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
