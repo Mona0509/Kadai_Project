@@ -25,13 +25,11 @@ int main()
 
 		for (int i = 0; i < 4; i++) {
 			check.hitNum += numCom.NumHitCheck(&random.randomNum_[i], &input.inputNum_[i]);
-			//std::cout << check.hitNum << std::endl;
 			check.blowNum += numCom.NumBlowCheck(&random.randomNum_[0],
 				&random.randomNum_[1],
 				&random.randomNum_[2],
 				&random.randomNum_[3],
 				&input.inputNum_[i]);
-			//std::cout << check.blowNum << std::endl;
 		}
 		LastAnswer lastAnswer;
 		clearCheck = lastAnswer.OpenText(check.hitNum,check.blowNum,check.count);
