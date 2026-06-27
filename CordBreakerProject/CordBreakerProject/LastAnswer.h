@@ -2,7 +2,7 @@
 class LastAnswer
 {
 public:
-	LastAnswer();
+	bool OpenText(int hitCount,int blowCount,int countCheck);
 };
 
 //

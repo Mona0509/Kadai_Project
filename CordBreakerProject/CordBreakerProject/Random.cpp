@@ -6,6 +6,6 @@ void Random::RandomCreate() {
 	
 	srand((unsigned int)time(NULL));
 	for (int i = 0; i < 4; i++) {
-		randomNum_[i] = rand();
+		randomNum_[i] = rand() % 10;
 	}
 }

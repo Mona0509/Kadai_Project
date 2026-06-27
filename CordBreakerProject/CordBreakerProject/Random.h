@@ -5,6 +5,7 @@ public:
 	void RandomCreate();
 public:
 	int randomNum_[4];
+	int num__ = 1;
 };
 
 //

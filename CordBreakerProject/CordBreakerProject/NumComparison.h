@@ -1,5 +1,4 @@
 #pragma once
-
 struct Check {
 	int hitNum = 0;
 	int blowNum = 0;
@@ -9,7 +8,13 @@ struct Check {
 class NumComparison
 {
 public:
-	void NumCheck(int* _answer[],int* _input);
+	int NumHitCheck(int* _answer,int* _input);
+	int NumBlowCheck(
+		int* _answer1,
+		int* _answer2,
+		int* _answer3,
+		int* _answer4,
+		int* _input);
 public:
 	Check check;
 };
