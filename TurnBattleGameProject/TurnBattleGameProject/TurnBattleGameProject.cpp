@@ -11,16 +11,19 @@ int main()
 {
     PlayerAttack* attackChar = new PlayerAttack;
 	EnemyAttack* enemyChar = new EnemyAttack;
-	
+	Character* character = new Character;
+	AttackTurn* attackTurn = new AttackTurn;
 	while (true)
 	{
+		character->OpenStatus();
+
 		// キャラと行動の選択
 		InputChar(&attackChar->_allyName);
 		InputAction(&attackChar->_allyAction);
 		RandomChoose(&enemyChar->_enemyName);
 		RandomAction(&enemyChar->_enemyAction);
 
-
+		attackTurn->ActionStart();
 	}
 }
 

@@ -1,8 +1,12 @@
 #include "AttackTurn.h"
 
-void AttackTurn::ChooseChar() {
+AttackTurn::AttackTurn() {
+	winCheck = false;
+}
+AttackTurn::~AttackTurn() {
 
 }
-void AttackTurn::ActionChar() {
+
+void AttackTurn::ActionStart() {
 
 }

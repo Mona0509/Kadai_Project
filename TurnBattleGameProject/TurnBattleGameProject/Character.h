@@ -1,7 +1,15 @@
 #pragma once
+#include <iostream>
 struct Status
 {
+	std::string name;
 	int attack;
+};
+struct Name 
+{
+	std::string name1 = {"Œ•m"};
+	std::string name2 = { "–‚–@g‚¢" };
+	std::string name3 = { "¢Š«m" };
 };
 struct AllStatus
 {
@@ -12,11 +20,18 @@ class Character
 {
 public:
 	Character();
-public:
+	~Character();
+	void OpenStatus();
+protected:
+	Name name;
 	AllStatus allHp;
 	Status sword;
 	Status wizard;
 	Status summoner;
+
+	Status enemySword;
+	Status enemyWizard;
+	Status enemySummoner;
 };
 
 //
