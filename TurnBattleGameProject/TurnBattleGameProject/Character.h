@@ -11,24 +11,28 @@ struct Name
 	std::string name2 = { "魔法使い" };
 	std::string name3 = { "召喚士" };
 };
-struct AllStatus
-{
-	int hp = 300;
-};
-
 class Character
 {
 public:
 	Character();
 	~Character();
 	void OpenStatus();
+public:
+	// 行動者と行動
+	char _allyName;
+	char _allyAction;
+
+	char _enemyName;
+	char _enemyAction;
 protected:
 	Name name;
-	AllStatus allHp;
+
+	int allHP;
 	Status sword;
 	Status wizard;
 	Status summoner;
 
+	int allEnemyHp;
 	Status enemySword;
 	Status enemyWizard;
 	Status enemySummoner;

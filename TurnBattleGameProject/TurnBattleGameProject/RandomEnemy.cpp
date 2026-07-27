@@ -1,15 +1,15 @@
 #include "RandomEnemy.h"
 #include <time.h>
 
-void RandomChoose(std::string* enemyName) {
+void RandomChoose(char* enemyName) {
 	srand((unsigned int)time(NULL));
-	std::string name[3] = { "Œ•m","–‚–@g‚¢","¢Š«m" };
-	*enemyName = name[rand() % 3];
+	char name = rand() % 3;;
+	*enemyName = name;
 };
 
-void RandomAction(std::string* enemyAction) {
+void RandomAction(char* enemyAction) {
 	srand((unsigned int)time(NULL));
-	std::string name[2] = { "UŒ‚","–hŒä"};
-	*enemyAction = name[rand() % 2];
+	char name = rand() % 2;
+	*enemyAction = name;
 };
 

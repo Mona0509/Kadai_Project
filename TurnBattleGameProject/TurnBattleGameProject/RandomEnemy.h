@@ -1,5 +1,5 @@
 #pragma once
 #include <iostream>
-void RandomChoose(std::string* enemyName);
+void RandomChoose(char* enemyName);
 
-void RandomAction(std::string* enemyAction);
+void RandomAction(char* enemyAction);

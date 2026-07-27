@@ -1,15 +1,19 @@
 #include "Input.h"
 #include <iostream>
-void InputChar(std::string* name) {
-	std::cout << "行動させたいキャラの名前を入力してください"<<std::endl;
-	std::string chooseName;
+void InputChar(char* name) {
+	std::cout << "\n行動させたいキャラを数字で指定して下さい\n"
+			<< "戦士: 1\n" << "魔法使い: 2\n"<<"召喚士: 3\n"
+			<< std::endl;
+	char chooseName;
 	std::cin >> chooseName;
 	*name = chooseName;
 };
 
-void InputAction(std::string* action) {
-	std::cout << "「攻撃」か「防御」を選んで、入力してください" << std::endl;
-	std::string chooseAction;
+void InputAction(char* action) {
+	std::cout << "「攻撃」か「防御」を数字で指定してください\n"
+			<< "攻撃: 1\n" << "防御: 2\n"
+			<< std::endl;
+	char chooseAction;
 	std::cin >> chooseAction;
 	*action = chooseAction;
 }

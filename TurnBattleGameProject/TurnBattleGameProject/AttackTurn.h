@@ -7,7 +7,6 @@ public:
 	AttackTurn();
 	~AttackTurn();
 	virtual void ActionStart();
-public:
 protected:
 	bool winCheck;
 };

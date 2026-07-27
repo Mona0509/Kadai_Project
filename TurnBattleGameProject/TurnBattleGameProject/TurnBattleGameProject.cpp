@@ -25,6 +25,16 @@ int main()
 
 		attackTurn->ActionStart();
 	}
+
+
+
+
+
+
+	delete attackChar;
+	delete enemyChar;
+	delete character;
+	delete attackTurn;
 }
 
 
