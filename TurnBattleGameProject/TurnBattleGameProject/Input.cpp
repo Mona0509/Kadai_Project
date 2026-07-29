@@ -2,7 +2,9 @@
 #include <iostream>
 void InputChar(char* name) {
 	std::cout << "\ns“®‚³‚¹‚½‚¢ƒLƒƒƒ‰‚ð”Žš‚ÅŽw’è‚µ‚Ä‰º‚³‚¢\n"
-			<< "íŽm: 1\n" << "–‚–@Žg‚¢: 2\n"<<"¢Š«Žm: 3\n"
+			<< "íŽm:     1\n" 
+			<< "–‚–@Žg‚¢: 2\n"
+			<< "¢Š«Žm:   3\n"
 			<< std::endl;
 	char chooseName;
 	std::cin >> chooseName;
@@ -11,7 +13,8 @@ void InputChar(char* name) {
 
 void InputAction(char* action) {
 	std::cout << "uUŒ‚v‚©u–hŒäv‚ð”Žš‚ÅŽw’è‚µ‚Ä‚­‚¾‚³‚¢\n"
-			<< "UŒ‚: 1\n" << "–hŒä: 2\n"
+			<< "UŒ‚: 1\n" 
+			<< "–hŒä: 2\n"
 			<< std::endl;
 	char chooseAction;
 	std::cin >> chooseAction;

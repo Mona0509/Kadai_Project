@@ -2,38 +2,66 @@
 #include <iostream>
 #include "Input.h"
 #include "RandomEnemy.h"
+
 #include "Character.h"
-#include "PlayerAttack.h"
+#include "CharacterFolder/SwordCharacter.h"
+#include "CharacterFolder/WizardCharacter.h"
+#include "CharacterFolder/SummonerCharacter.h"
+
+#include "EnemyCharacter/SwordEnemy.h"
+#include "EnemyCharacter/WizardEnemy.h"
+#include "EnemyCharacter/SummonerEnemy.h"
+
 #include "AttackTurn.h"
-#include "EnemyAttack.h"
 
 int main()
 {
-    PlayerAttack* attackChar = new PlayerAttack;
-	EnemyAttack* enemyChar = new EnemyAttack;
-	Character* character = new Character;
+	std::unique_ptr<Character> character(new Character);
+
+	std::unique_ptr<SwordCharacter> sword(new SwordCharacter);
+	std::unique_ptr<WizardCharacter> wizard(new WizardCharacter);
+	std::unique_ptr<SummonerCharacter> summoner(new SummonerCharacter);
+
+	std::unique_ptr<SwordEnemy> enemySword(new SwordEnemy);
+	std::unique_ptr<WizardEnemy> enemyWizard(new WizardEnemy);
+	std::unique_ptr<SummonerEnemy> enemySummoner(new SummonerEnemy);
+
 	AttackTurn* attackTurn = new AttackTurn;
+
+	sword->SetStatus();
+	wizard->SetStatus();
+	summoner->SetStatus();
+	enemySword->SetStatus();
+	enemyWizard->SetStatus();
+	enemySummoner->SetStatus();
+
 	while (true)
 	{
-		character->OpenStatus();
+		sword->OpenStatus();
+		wizard->OpenStatus();
+		summoner->OpenStatus();
 
-		// キャラと行動の選択
-		InputChar(&attackChar->_allyName);
-		InputAction(&attackChar->_allyAction);
-		RandomChoose(&enemyChar->_enemyName);
-		RandomAction(&enemyChar->_enemyAction);
+		 //キャラと行動の選択
+		InputChar(&character->moveName);
+		InputAction(&character->actionName);
+		RandomChoose(&character->moveEnemyName);
+		RandomAction(&character->actionEnemyName);
 
-		attackTurn->ActionStart();
+		switch (character->moveName)
+		{
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		}
 	}
 
 
 
 
 
-
-	delete attackChar;
-	delete enemyChar;
-	delete character;
 	delete attackTurn;
 }
 

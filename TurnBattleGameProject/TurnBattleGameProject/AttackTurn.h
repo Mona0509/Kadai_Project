@@ -1,14 +1,14 @@
 #pragma once
 #include <iostream>
-#include "Character.h"
-class AttackTurn : public Character
+#include "character.h"
+class AttackTurn
 {
 public:
 	AttackTurn();
 	~AttackTurn();
-	virtual void ActionStart();
-protected:
-	bool winCheck;
+	void ActionStart();
+private:
+	Character character;
 };
 
 

@@ -125,18 +125,28 @@
   <ItemGroup>
     <ClCompile Include="AttackTurn.cpp" />
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="EnemyAttack.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="PlayerAttack.cpp" />
+    <ClCompile Include="CharacterFolder\SummonerCharacter.cpp" />
+    <ClCompile Include="CharacterFolder\SwordCharacter.cpp" />
+    <ClCompile Include="CharacterFolder\WizardCharacter.cpp" />
+    <ClCompile Include="EnemyCharacter\SummonerEnemy.cpp" />
+    <ClCompile Include="EnemyCharacter\SwordEnemy.cpp" />
+    <ClCompile Include="EnemyCharacter\WizardEnemy.cpp" />
+    <ClCompile Include="Input.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="RandomEnemy.cpp" />
     <ClCompile Include="TurnBattleGameProject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttackTurn.h" />
     <ClInclude Include="Character.h" />
-    <ClInclude Include="EnemyAttack.h" />
+    <ClInclude Include="CharacterFolder\SummonerCharacter.h" />
+    <ClInclude Include="CharacterFolder\SwordCharacter.h" />
+    <ClInclude Include="CharacterFolder\WizardCharacter.h" />
+    <ClInclude Include="EnemyCharacter\SummonerEnemy.h" />
+    <ClInclude Include="EnemyCharacter\SwordEnemy.h" />
+    <ClInclude Include="EnemyCharacter\WizardEnemy.h" />
     <ClInclude Include="Input.h" />
-    <ClInclude Include="PlayerAttack.h" />
     <ClInclude Include="RandomEnemy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
