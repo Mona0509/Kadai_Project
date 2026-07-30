@@ -12,7 +12,6 @@
 #include "EnemyCharacter/WizardEnemy.h"
 #include "EnemyCharacter/SummonerEnemy.h"
 
-#include "AttackTurn.h"
 
 int main()
 {
@@ -26,7 +25,6 @@ int main()
 	std::unique_ptr<WizardEnemy> enemyWizard(new WizardEnemy);
 	std::unique_ptr<SummonerEnemy> enemySummoner(new SummonerEnemy);
 
-	AttackTurn* attackTurn = new AttackTurn;
 
 	sword->SetStatus();
 	wizard->SetStatus();
@@ -35,8 +33,11 @@ int main()
 	enemyWizard->SetStatus();
 	enemySummoner->SetStatus();
 
-	while (true)
+	bool isClear = false;
+
+	while (!isClear)
 	{
+		character->OpenHP();
 		sword->OpenStatus();
 		wizard->OpenStatus();
 		summoner->OpenStatus();
@@ -47,13 +48,36 @@ int main()
 		RandomChoose(&character->moveEnemyName);
 		RandomAction(&character->actionEnemyName);
 
+		Status enemyAttack;
+
+		switch (character->actionEnemyName)
+		{
+		case 1:
+			enemyAttack = enemySword->status;
+			break;
+		case 2:
+			enemyAttack = enemyWizard->status;
+			break;
+		case 3:
+			enemyAttack = enemySummoner->status;
+			break;
+		}
+
+		std::cout << character->actionName << std::endl;
+		std::cout << character->actionEnemyName << std::endl;
+		//std::cout << character->moveName << std::endl;
+		//std::cout << character->moveEnemyName << std::endl;
+
 		switch (character->moveName)
 		{
 		case 1:
+			isClear = sword->StartAttack(&enemyAttack);
 			break;
 		case 2:
+			isClear = sword->StartAttack(&enemyAttack);
 			break;
 		case 3:
+			isClear = sword->StartAttack(&enemyAttack);
 			break;
 		}
 	}
@@ -62,7 +86,6 @@ int main()
 
 
 
-	delete attackTurn;
 }
 
 

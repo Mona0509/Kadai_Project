@@ -1,15 +1,16 @@
 #include "RandomEnemy.h"
 #include <time.h>
+#include "Character.h"
 
-void RandomChoose(char* enemyName) {
+void RandomChoose(int* enemyName) {
 	srand((unsigned int)time(NULL));
-	char name = rand() % 3;;
+	int name = rand() % 3 + 1;
 	*enemyName = name;
 };
 
-void RandomAction(char* enemyAction) {
+void RandomAction(int* enemyAction) {
 	srand((unsigned int)time(NULL));
-	char name = rand() % 3 + 1;
+	int name = rand() % 2 + 1;
 	*enemyAction = name;
 };
 

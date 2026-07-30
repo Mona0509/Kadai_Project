@@ -1,4 +1,4 @@
 #pragma once
 #include <iostream>
-void InputChar(char* name);
-void InputAction(char* action);
+void InputChar(int* name);
+void InputAction(int* action);

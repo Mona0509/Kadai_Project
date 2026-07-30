@@ -1,6 +1,6 @@
 #include "WizardEnemy.h"
 
 WizardEnemy::WizardEnemy() {
-	_name = { "魔法使い" };
+	_name = { "敵の魔法使い" };
 	_attack = 50;
 }

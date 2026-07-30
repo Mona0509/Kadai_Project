@@ -1,7 +1,7 @@
 #include "SummonerEnemy.h"
 
 SummonerEnemy::SummonerEnemy() {
-	_name = { "¢Š«m" };
+	_name = { "“G‚Ì¢Š«m" };
 	_attack = 30;
 
 }

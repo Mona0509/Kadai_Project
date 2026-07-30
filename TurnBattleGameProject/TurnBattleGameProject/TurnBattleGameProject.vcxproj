@@ -123,7 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AttackTurn.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="CharacterFolder\SummonerCharacter.cpp" />
     <ClCompile Include="CharacterFolder\SwordCharacter.cpp" />
@@ -138,7 +137,6 @@
     <ClCompile Include="TurnBattleGameProject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AttackTurn.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CharacterFolder\SummonerCharacter.h" />
     <ClInclude Include="CharacterFolder\SwordCharacter.h" />

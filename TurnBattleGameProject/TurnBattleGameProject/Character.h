@@ -12,28 +12,33 @@ public:
 	Character();
 	~Character();
 
-	int allHP = 100;
-	int enemyAllHP = 100;
+	Status status = {};
+
+	static int allHP;
+	static int enemyAllHP;
 
 	// çsìÆé“Ç∆çsìÆ
-	char moveName = {};
-	char actionName = {};
+	static int moveName;
+	static int actionName;
 
-	char moveEnemyName = {};
-	char actionEnemyName = {};
+	static int moveEnemyName;
+	static int actionEnemyName;
 
 	virtual void SetStatus();
 	virtual void OpenStatus();
+	void OpenHP();
+
 	virtual bool StartAttack(const Status* enemyStatus);
-	virtual bool Attack(const Status* enemyStatus);
-	virtual bool Attack(const Status* attackStatus, int* hp);
 private:
+	virtual void Attack(const Status* enemyStatus);
+	virtual void Attack(const Status* attackStatus,int* hitHp,int* attackHp);
+	void CriticalAttack(const Status* attackStatus,int* hp);
+	void CounterAttack(const Status* attackStatus, int* hp);
 	bool DrawAction();
 protected:
 	std::string _name = {};
 	int _attack = {};
 
-	Status status = {};
 
 };
 
