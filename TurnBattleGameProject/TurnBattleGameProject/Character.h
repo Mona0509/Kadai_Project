@@ -15,7 +15,6 @@ public:
 	int allHP = 100;
 	int enemyAllHP = 100;
 
-public:
 	// çsìÆé“Ç∆çsìÆ
 	char moveName = {};
 	char actionName = {};
@@ -25,8 +24,11 @@ public:
 
 	virtual void SetStatus();
 	virtual void OpenStatus();
-	virtual void StartAttack();
-
+	virtual bool StartAttack(const Status* enemyStatus);
+	virtual bool Attack(const Status* enemyStatus);
+	virtual bool Attack(const Status* attackStatus, int* hp);
+private:
+	bool DrawAction();
 protected:
 	std::string _name = {};
 	int _attack = {};
